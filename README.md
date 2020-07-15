@@ -1,7 +1,12 @@
 # UnityDebugPanic
 
+unity2017以上に対応 win/mac対応
+
 エラーを検知したときに一目でわかるようにするための機能です
+
 エラー内容、スタックトレースを画面上に描画してスクショを保存します
+
+※エディタ専用
 
 ![Screenshot_2020-07-15-18-58-16](https://user-images.githubusercontent.com/47945028/87531829-3e0f3200-c6cd-11ea-9c71-57d020b0d468.png)
 
