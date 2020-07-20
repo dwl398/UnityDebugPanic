@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
@@ -127,6 +128,15 @@ public static class DebugPanic
 	{
 		_level = DetectionLevel.VeryHard;
 		UpdateMenuItemChecked();
+	}
+
+	[MenuItem("Tools/DebugPanicLevel/ShowInExplorer", priority = 255)]
+	private static void ShowInExplorer()
+	{
+		// 一つ上の階層が開かれてしまうのでProcessに変更
+		// EditorUtility.RevealInFinder(Application.persistentDataPath);
+
+		Process.Start(Application.persistentDataPath);
 	}
 
 	private static void UpdateMenuItemChecked()
