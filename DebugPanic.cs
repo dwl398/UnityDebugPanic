@@ -1,4 +1,4 @@
-﻿using System.IO;
+using System.IO;
 using System.Diagnostics;
 using UnityEngine;
 using UnityEngine.UI;
@@ -83,14 +83,14 @@ public static class DebugPanic
 	{
 		if(EditorApplication.isPlayingOrWillChangePlaymode)
 		{
+			UpdateMenuItemChecked();
+
 			_level = GetDetectionLevelByMenuChecked();
 
 			SetState(State.Detection);
 		}
 
 		EditorApplication.playModeStateChanged += OnChangedPlayMode;
-
-		UpdateMenuItemChecked();
 	}
 
 	#region menu
